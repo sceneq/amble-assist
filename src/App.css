@@ -1,0 +1,92 @@
+#root {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.option {
+    padding-bottom: 8px;
+}
+
+.hamburger-menu {
+    z-index: 99;
+    position: relative;
+}
+
+#mainMap {
+    z-index: 0;
+}
+
+.hamburger-button {
+    bottom: 4vh;
+    left: 4vw;
+    width: 80px;
+    height: 80px;
+    background: none;
+    position: fixed;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-icon {
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.menu {
+    position: fixed;
+    bottom: 15vh;
+    left: -250px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.menu.open {
+    left: 20px;
+}
+
+.bar {
+    transition: all 0.3s ease-in-out;
+}
+
+/* バー 開いた状態 */
+.open .bar:nth-child(1) {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+.open .bar:nth-child(2) {
+    transform: translateX(200px);
+}
+.open .bar:nth-child(3) {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.stats {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.stats span {
+    margin: 0 5px;
+    font-weight: bold;
+}
